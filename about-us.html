@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Auto Pap</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+	<link rel="icon" href="img/icon.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/component.css">
 	<link rel="stylesheet" href="css/style.css">
 	<style type="text/css">
 </style>
@@ -19,27 +24,27 @@
 					<div class="logo-container">
 						<div class="logo-image"><div><img src="img/icon.svg" alt=""></div></div>
 						<div class="logo-content">
-							<p class="logo-text">Auto Pap</p>
-							<span class="logo-sub">Za održavanje i popravak motornih vozila</span>
+							<h1 class="logo-text">Auto Pap</h1>
+							<h3 class="logo-sub">Za održavanje i popravak motornih vozila</h3>
 						</div>					
 					</div>
 					<div class="info-container">
 						<div class="info-box">
-							<div class="info-box-icon"><i class="far fa-calendar-alt fa-4x"></i></div>
+							<div class="info-box-icon"><i class="far fa-calendar-alt fa-2x"></i></div>
 							<div class="info-box-text">
 								<p>Ponedjeljak-Petak 08:00-16:00<p>
-								<span>Subota 08:00-13:00</span>
+								<p>Subota 08:00-13:00</p>
 							</div>
 						</div>
 						<div class="info-box">
-							<div class="info-box-icon"><i class="fas fa-map-marker-alt fa-4x"></i></div>
+							<div class="info-box-icon"><i class="fas fa-map-marker-alt fa-2x"></i></div>
 							<div class="info-box-text">
-								<p>Josipa Runjanina<p> 
-								<span>32100 Vinkovci</span>
+								<p>Josipa Runjanina 11a<p> 
+								<p>32100 Vinkovci</p>
 							</div>
 						</div>
 						<div class="info-box">
-							<div class="info-box-icon"><i class="fas fa-mobile-alt fa-4x"></i></div>
+							<div class="info-box-icon"><i class="fas fa-mobile-alt fa-2x"></i></div>
 							<div class="info-box-text">
 								<p>0989427536<p>
 								<p>autopap@gmail.com</p>
@@ -49,7 +54,7 @@
 				</div>
 			</div>
 
-			<div class="header-nav">
+			<div class="header-nav" id="myNav">
 				<div class="header-nav-content">
 					<nav class="main-nav">
 						<ul>
@@ -60,6 +65,17 @@
 						</ul>
 					</nav>
 				</div>
+			</div>
+			<div class="mobile-menu-wrap">
+				<div id="dl-menu" class="dl-menuwrapper">
+					<button class="dl-trigger">Open Menu</button>
+					<ul class="dl-menu">
+						<li><a href="index.html">Naslovna</a></li>
+						<li><a href="about-us.html">O nama</a></li>
+						<li><a href="contact.html">Kontakt</a></li>
+						<li><a href="gallery.html">Galerija</a></li>
+					</ul>
+				</div><!-- /dl-menuwrapper -->
 			</div>
 		</header><!-- HEADER END -->
 		<!-- MAIN CONTENT -->
@@ -84,7 +100,7 @@
 						<p>Održavanje i popravak motornih vozila su poslovi koje kvalitetno obavlja tvrtka AUTO-PAP j.d.o.o. koja u svakodnevnom radu slijedi isključivo najviše standarde.</p>
 					</div>
 					<div class="about-img">
-						<img src="img/banner.jpg" alt="">
+						<img src="img/workshop.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -92,11 +108,61 @@
 		<!-- FOOTER -->
 		<footer>
 			<div class="footer-wrap">
-				<div class="footer-content">
-					<p class="copyright">Copyright &copy All Rights Reserved</p>
+				<div class="footer-info-wrap">
+					<div class="footer-info">
+						<div class="footer-module">
+							<div class="module-title">
+								<h2>Auto Pap j.d.o.o.</h2>
+								<hr>
+							</div>
+							<div class="module-content">
+								<p>
+									Auto Pap j.d.o.o., Josipa Runjanina 11a, 32100 Vinkovci
+									<br>
+									MBS 035371239
+									<br>
+									OIB 61157113158
+								</p>
+							</div>
+						</div>
+						<div class="footer-module">
+							<div class="module-title">
+								<h2>Kontakt</h2>
+								<hr>
+							</div>
+							<div class="module-content">
+								<p>
+									<i class="far fa-clock"></i> Ponedjeljak-Petak 08:00-16:00 
+									<br>Subota 08:00-13:00
+									<br>
+									<i class="fas fa-phone"></i> 0989427536
+									<br>
+									<i class="far fa-envelope-open"></i> autopap@gmail.com
+								</p>
+							</div>
+						</div>
+						<div class="footer-module">
+							<div class="module-title">
+								<h2>Pratite nas</h2>
+								<hr>
+							</div>
+							<div class="module-content">
+								<p>
+									<a href="#"><i class="fab fa-youtube"></i> Youtube kanal</a>
+									<br>
+									<a href="#"><i class="fab fa-facebook"></i> Službena facebook stranica</a>
+									<br>
+									<a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<p>Copyright &copy All Rights Reserved</p>
 				</div>
 			</div>
-		</footer><!-- FOOTER END -->
+		</footer>
 
 		<div class="scroll-to-top" id="arrow-up">
 			<i class="fas fa-long-arrow-alt-up"></i>
@@ -106,6 +172,8 @@
 	</div>
 	
 		<script src="js/jquery.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.dlmenu.js"></script>
 		<script src="js/custom.js"></script>
 </body>
 </html>

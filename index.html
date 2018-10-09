@@ -2,13 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Auto Pap</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+	<link rel="icon" href="img/icon.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/component.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+	.caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #222;
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	.caption .caption-flex {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.item img {
+		width: 100%;
+	}
+	</style>
 </head>
 <body>
-	<div class="container">
+	
 		<!-- HEADER -->
 		<header id="header">
 			<div class="header-top">
@@ -16,27 +41,27 @@
 					<div class="logo-container">
 						<div class="logo-image"><div><img src="img/icon.svg" alt=""></div></div>
 						<div class="logo-content">
-							<p class="logo-text">Auto Pap</p>
-							<span class="logo-sub">Za održavanje i popravak motornih vozila</span>
+							<h1 class="logo-text">Auto Pap</h1>
+							<h3 class="logo-sub">Za održavanje i popravak motornih vozila</h3>
 						</div>					
 					</div>
 					<div class="info-container">
 						<div class="info-box">
-							<div class="info-box-icon"><i class="far fa-calendar-alt fa-4x"></i></div>
+							<div class="info-box-icon"><i class="far fa-calendar-alt fa-2x"></i></div>
 							<div class="info-box-text">
 								<p>Ponedjeljak-Petak 08:00-16:00<p>
-								<span>Subota 08:00-13:00</span>
+								<p>Subota 08:00-13:00</p>
 							</div>
 						</div>
 						<div class="info-box">
-							<div class="info-box-icon"><i class="fas fa-map-marker-alt fa-4x"></i></div>
+							<div class="info-box-icon"><i class="fas fa-map-marker-alt fa-2x"></i></div>
 							<div class="info-box-text">
-								<p>Josipa Runjanina<p> 
-								<span>32100 Vinkovci</span>
+								<p>Josipa Runjanina 11a<p> 
+								<p>32100 Vinkovci</p>
 							</div>
 						</div>
 						<div class="info-box">
-							<div class="info-box-icon"><i class="fas fa-mobile-alt fa-4x"></i></div>
+							<div class="info-box-icon"><i class="fas fa-mobile-alt fa-2x"></i></div>
 							<div class="info-box-text">
 								<p>0989427536<p>
 								<p>autopap@gmail.com</p>
@@ -46,7 +71,7 @@
 				</div>
 			</div>
 
-			<div class="header-nav">
+			<div class="header-nav" id="myNav">
 				<div class="header-nav-content">
 					<nav class="main-nav">
 						<ul>
@@ -58,29 +83,42 @@
 					</nav>
 				</div>
 			</div>
+			<div class="mobile-menu-wrap">
+				<div id="dl-menu" class="dl-menuwrapper">
+					<button class="dl-trigger">Open Menu</button>
+					<ul class="dl-menu">
+						<li><a href="index.html">Naslovna</a></li>
+						<li><a href="about-us.html">O nama</a></li>
+						<li><a href="contact.html">Kontakt</a></li>
+						<li><a href="gallery.html">Galerija</a></li>
+					</ul>
+				</div><!-- /dl-menuwrapper -->
+			</div>
 		</header><!-- HEADER END -->
 		<!-- MAIN CONTENT -->
 		<main>
 			<div class="main-content-banner">
 				<div class="main-banner">
-					<p>Kvalitetan rad po pristupačnoj cijeni</p>
+					<div class="banner-text">
+						<p>Kvalitetan rad po pristupačnoj cijeni</p>
+					</div>
 					<a href="#" id="to-services">Naše usluge</a>
 				</div>
 			</div>
 			<div class="company-stats-wrap">
 				<div class="company-stats">
 					<div class="stats">
-						<i class="fas fa-car"></i>
+						<i class="fas fa-car fa-6x"></i>
 						<span class="counter">457</span>
 						<span class="type">Zadovoljnih klijenata</span>
 					</div>
 					<div class="stats">
-						<i class="fas fa-wrench"></i>
+						<i class="fas fa-wrench fa-6x"></i>
 						<span class="counter">554</span>
 						<span class="type">Popravaka</span>
 					</div>
 					<div class="stats">
-						<i class="fas fa-users"></i>
+						<i class="fas fa-users fa-6x"></i>
 						<span class="counter">4</span>
 						<span class="type">Zaposlena</span>
 					</div>
@@ -95,52 +133,188 @@
 			<div class="main-services-wrap">
 				<h1 id="usluge">Usluge</h1>
 				<div class="main-services">
-					<div class="services">
-						<div class="services-icon"><img src="img/tires.jpg" alt="Tires"></div>
-						<div class="services-txt">
-							<h1>Montaža i balansiranje guma</h1>
+					<div class="services" id="service-1">
+						<div class="item">
+							<img src="img/tires.jpg" alt="Tires">
+							<div class="caption" id="caption-1">
+								<h2>Montaža i balansiranje guma</h2>
+								<p>Kupili ste gume kod nekog drugog, ili jednostavno želite montirati gume koje ste čuvali u garaži, nema problema. Naši servisi vrše montažu svih guma.</p>
+								<ul>
+									<li>Ugradnja i balansiranje auto gume 12ʺ-14ʺ = 50 kn</li>
+									<li>Ugradnja i balansiranje auto gume 15ʺ = 60 kn</li>
+									<li>Ugradnja i balansiranje auto gume 16ʺ = 70 kn</li>
+									<li>Ugradnja i balansiranje auto gume 17ʺ-18ʺ = 80 kn</li>
+									<li>Ugradnja i balansiranje auto gume 19ʺ-20ʺ = 90 kn</li>
+									<li>Ugradnja i balansiranje auto gume 21ʺ-26ʺ = 100 kn</li>
+								</ul>
+							</div>
+							<div class="services-txt">
+								<h1>Montaža i balansiranje guma</h1>
+							</div>
 						</div>
 					</div>
-					<div class="services">
-						<div class="services-icon"><img src="img/brakes.jpg" alt="Tires"></div>
-						<div class="services-txt">
-							<h1>Pregled i popravak kočnica</h1>
+					<div class="services" id="service-2">
+						<div class="item">
+							<img src="img/brakes.jpg" alt="Tires">
+							<div class="caption" id="caption-2">
+								<h2>Pregled i popravak kočnica</h2>
+								<p>Sustav kočenja je jedan od najvažnijih komponenata svakog vozila, zato što je zaduženo za Vašu sigurnost.</p>
+								<h4>Standardni servis kočnica:</h4>
+								<ul>
+									<li>Pregled trenutnog stanja sustava kočenja</li>
+									<li>Inspekcija glavnih dijelova kočnice</li>
+									<li>Instalacija kočionih pločica i čeljusti</li>
+									<li>Zamjena prednjih i zadnjih kočionih pločica</li>
+									<li>Zamjena prednjih i zadnjih diskova</li>
+									<li>Zamjena crijeva kočnica</li>
+									<li>Zamjena ulja iz sustava</li>
+									<li>Obrada kočionih diskova</li>
+								</ul>
+							</div>
+							<div class="services-txt">
+								<h1>Pregled i popravak kočnica</h1>
+							</div>
 						</div>
 					</div>
-					<div class="services">
-						<div class="services-icon"><img src="img/car-service.jpg" alt="Tires"></div>
-						<div class="services-txt">
-							<h1>Veliki i mali servis vozila</h1>
+					<div class="services" id="service-3">
+						<div class="item">
+							<img src="img/car-service.jpg" alt="Tires">
+							<div class="caption" id="caption-3">
+								<h2>Veliki i mali servis vozila</h2>
+								<p>Kupili ste gume kod nekog drugog, ili jednostavno želite montirati gume koje ste čuvali u garaži, nema problema. Naši servisi vrše montažu svih guma.</p>
+								<div class="caption-flex">
+									<div>
+										<h4>Mali servis:</h4>
+										<ul>
+											<li>Zamjena ulja</li>
+											<li>Zamjena filtera ulja</li>
+											<li>Zamjena filtera klime</li>
+											<li>Zamjena filtera zraka</li>
+											<li>Zamjena filtera kabine</li>
+										</ul>
+									</div>
+									<div>
+										<h4>Veliki servis:</h4>
+										<ul>
+											<li>Zupčasti remen</li>
+											<li>Tračni remen</li>
+											<li>Klizači (vodilice)</li>
+											<li>Natezači (špraneri)</li>
+											<li>vodena pumpa</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="services-txt">
+								<h1>Veliki i mali servis vozila</h1>
+							</div>
 						</div>
 					</div>
-					<div class="services">
-						<div class="services-icon"><img src="img/car-maintenance.jpg" alt="Tires"></div>
-						<div class="services-txt">
-							<h1>Popravci vozila</h1>
+					<div class="services" id="service-4">
+						<div class="item">
+							<img src="img/car-maintenance.jpg" alt="Tires">
+							<div class="caption" id="caption-4">
+								<h2>Popravci motora</h2>
+								<p>Pogonska jedinica automobila (motor) sastoji se od mnogih tehnički kompliciranih komponenti koje tijekom vremena mogu biti izložene kvarovima zbog lošeg rada, neodgovarajućeg servisiranja ili vanjskih uzroka.</p>
+								<h4>Koraci u obavljanju usluge:</h4>
+								<ul>
+									<li>Uklanjanje motora iz vozila</li>
+									<li>Rastavljanje motora</li>
+									<li>Provjera statusa svih komponenti</li>
+									<li>Zamjena oštećenih dijelova</li>
+									<li>Zamjena remena</li>
+									<li>Popravak glave cilindra, ako je potrebno (izmjena brtvila)</li>
+									<li>Popravak / reparacija mlaznica goriva</li>
+									<li>Popravak / reparacija turbokompresora, ako je potrebno</li>
+									<li>Popravak blok motora, ako je potrebno (zamjena klipova, glavnih ležajeva, ležajeva)</li>
+									<li>Promjena ulja i drugih tekućina, promjena svih filtera</li>
+									<li>Ponovno postavljanje motora u vozilo</li>
+									<li>Provjera ima li propuštanja i ispravnosti rada motora</li>
+								</ul>
+							</div>
+							<div class="services-txt">
+								<h1>Popravci motora</h1>
+							</div>
 						</div>
 					</div>
-					<div class="services">
-						<div class="services-icon"><img src="img/air_conditioning.jpg" alt="Tires"></div>
-						<div class="services-txt">
-							<h1>Servis klime</h1>
+					<div class="services" id="service-5">
+						<div class="item">
+							<img src="img/air_conditioning.jpg" alt="Tires">
+							<div class="caption" id="caption-5">
+								<h2>Servis klime</h2>
+								<p>Kada se temperatura diže, nema ništa više osvježavajuće nego vožnja u hladnom, klimatiziranim automobilu. No, tijekom vremena, spojnice klime postaju labave, izvor neugodnih mirisa u unutrašnjosti vozila često dolazi iz AC sustava i Vaše ledeno osvježenje može čak postati izvorom po zdravlje opasnih mikroorganizama.</p>
+								<h4>Cijene:</h4>
+								<ul>
+									<li>Dijagnostika = 180 kn</li>
+									<li>Punjenje = 280 kn</li>
+									<li>Dopunjavanje = 220 kn</li>
+									<li>Čišćenje AC aeroseptom = 100 kn</li>
+									<li>Popravak i izrada crijeva = do 350 kn</li>
+								</ul>
+							</div>
+							<div class="services-txt">
+								<h1>Servis klime</h1>
+							</div>
 						</div>
 					</div>
-					<div class="services">
-						<div class="services-icon"><img src="img/car-exhaust.jpg" alt="Tires"></div>
-						<div class="services-txt">
-							<h1>Ispušni plinovi</h1>
+					<div class="services" id="service-6">
+						<div class="item">
+							<img src="img/car-exhaust.jpg" alt="Tires">
+							<div class="caption" id="caption-6">
+								<h2>Ispušni plinovi</h2>
+								<p> Ispušni sistem na vozilu, kao i ostale komponente vozila, ima vrlo važnu ulogu. Naime, ispušni sistem na vozilu, osim stišavanja buke ima funkciju pravilnog i maksimalnog odvoda ispušnih plinova iz motora. Stoga, vrlo je važno odlučiti se za tvornički izrađeni lonac ili ispušni element, koji ima točno proračunat promjer cijevi i veličinu lonca u skladu sa snagom motora.</p>
+								<h4>Cijene:</h4>
+								<ul>
+									<li>Dijagnostika = 180 kn</li>
+									<li>Punjenje = 280 kn</li>
+									<li>Dopunjavanje = 220 kn</li>
+									<li>Čišćenje AC aeroseptom = 100 kn</li>
+									<li>Popravak i izrada crijeva = do 350 kn</li>
+								</ul>
+							</div>
+							<div class="services-txt">
+								<h1>Ispušni plinovi</h1>
+							</div>
 						</div>
 					</div>
-					<div class="services">
-						<div class="services-icon"><img src="img/spurg.jpg" alt="Tires"></div>
-						<div class="services-txt">
-							<h1>Optika</h1>
+					<div class="services" id="service-7">
+						<div class="item">
+							<img src="img/spurg.jpg" alt="Tires">
+							<div class="caption" id="caption-7">
+								<h2>Optika</h2>
+								<p>Ako primijetite da vaše vozilo zanosi udesno ili ulijevo kad na jedan kratak trenutak pustite kolo upravljača dok vozite ravno morate provjeriti geometriju svojih kotača. Podesite geometriju kotača, odnosno podesite dijelove prednjeg i stražnjeg ovjesa. Ako vaše vozilo nije ispravno podešeno to može uzrokovati preuranjeno trošenje pneumatika.</p>
+								<h4>Koraci:</h4>
+								<ul>
+									<li>Provjera kompletnog ovjesa vozila u samo 60 sekundi s Quick Check Comp controlom</li>
+									<li>Nova tehnologija preciznih meta koje se postavljaju na kotače</li>
+									<li>4 x visoko rezolucijske 3D kamere koju su izuzetno precizne te svojim načinom snimanja garantiraju 100% tvorničke postavke na vozilu</li>
+									<li>Code Link bežični el. uređaj za spajanje te poravnanje volana s bazom vozila (HUNTER CODE LINK RESETS)</li>
+									<li>niz dodatnih noviteta poput mapa za sve tipove vozila koji su trenutno dostupni na svjetskom tržištu</li>
+								</ul>
+							</div>
+							<div class="services-txt">
+								<h1>Optika</h1>
+							</div>
 						</div>
 					</div>
-					<div class="services">
-						<div class="services-icon"><img src="img/auto-dijagnostika.png" alt="Tires"></div>
-						<div class="services-txt">
-							<h1>Računalna dijagnostika</h1>
+					<div class="services" id="service-8">
+						<div class="item">
+							<img src="img/auto-dijagnostika.png" alt="Tires">
+							<div class="caption" id="caption-8">
+								<h2>Računalna dijagnostika</h2>
+								<p>Dijagnostika se radi tako da se uređaj za dijagnostiku (poznat kao dijagnostički tester) spaja na računalo od vozila. Ova usluga omogućuje provjeru ukupnog tehničkog stanja vozila, uključujući usporedbu parametara vozila s idealnim parametrima. S tim usporedbama vrlo se lako otkriju kvarovi na autu, te se mogu brzo ukloniti.</p>
+								<h4>Koraci u obavljanju usluge:</h4>
+								<ul>
+									<li>Spajanje uređaja za dijagnostiku</li>
+									<li>Traženje koda greške</li>
+									<li>Dešifriranje koda greške</li>
+									<li>Printanje rezultata dijagnostike</li>
+									<li>Komentiranje rezultata dijagnostike</li>
+								</ul>
+							</div>
+							<div class="services-txt">
+								<h1>Računalna dijagnostika</h1>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -149,18 +323,70 @@
 
 		<footer>
 			<div class="footer-wrap">
-				<div class="footer-content">
-					<p class="copyright">Copyright &copy All Rights Reserved</p>
+				<div class="footer-info-wrap">
+					<div class="footer-info">
+						<div class="footer-module">
+							<div class="module-title">
+								<h2>Auto Pap j.d.o.o.</h2>
+								<hr>
+							</div>
+							<div class="module-content">
+								<p>
+									Auto Pap j.d.o.o., Josipa Runjanina 11a, 32100 Vinkovci
+									<br>
+									MBS 035371239
+									<br>
+									OIB 61157113158
+								</p>
+							</div>
+						</div>
+						<div class="footer-module">
+							<div class="module-title">
+								<h2>Kontakt</h2>
+								<hr>
+							</div>
+							<div class="module-content">
+								<p>
+									<i class="far fa-clock"></i> Ponedjeljak-Petak 08:00-16:00 
+									<br>Subota 08:00-13:00
+									<br>
+									<i class="fas fa-phone"></i> 0989427536
+									<br>
+									<i class="far fa-envelope-open"></i> autopap@gmail.com
+								</p>
+							</div>
+						</div>
+						<div class="footer-module">
+							<div class="module-title">
+								<h2>Pratite nas</h2>
+								<hr>
+							</div>
+							<div class="module-content">
+								<p>
+									<a href="#"><i class="fab fa-youtube"></i> Youtube kanal</a>
+									<br>
+									<a href="#"><i class="fab fa-facebook"></i> Službena facebook stranica</a>
+									<br>
+									<a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<p>Copyright &copy All Rights Reserved</p>
+				</div>
+				<div class="scroll-to-top" id="arrow-up" >
+					<i class="fas fa-long-arrow-alt-up"></i>
 				</div>
 			</div>
 		</footer>
-
-		<div class="scroll-to-top" id="arrow-up">
-			<i class="fas fa-long-arrow-alt-up"></i>
-		</div>
-	</div>
+	
+	
 
 	<script src="js/jquery.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.dlmenu.js"></script>
 	<script src="js/custom.js"></script>
 </body>
 </html>
