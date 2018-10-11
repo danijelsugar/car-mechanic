@@ -23,7 +23,7 @@ p, span, a, input, label, textarea, li {
 }
 .logo-container {
 	display: flex;
-    flex-basis: 44%;
+    flex-basis: 40%;
 }
 .logo-image {
     padding: 0 20px;
@@ -50,7 +50,7 @@ p, span, a, input, label, textarea, li {
     margin-top: 5px;
 }
 .info-container {
-    flex-basis: 56%;
+    flex-basis: 60%;
 	display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -61,9 +61,10 @@ p, span, a, input, label, textarea, li {
 }
 .info-box i {
 	color: #4867c0;
+    font-size: 2.5em;
 }
 .info-box p {
-	margin: 0 0 0 5px;
+	margin: 2px 0 5px 5px;
     font-size: 14px;
 }
 .header-nav {
@@ -138,11 +139,12 @@ p, span, a, input, label, textarea, li {
     text-shadow: 1px 1px 20px;
     background: #000;
     opacity: 0.6;
+    padding: 5px 10px;
 }
 .main-banner a, .featured-text a {
     color: #fff;
     border: 2px solid #199CDB;
-    padding: 10px 15px;
+    padding: 15px 20px;
     background-color: #199CDB;
 }
 .main-banner a:hover, .featured-text a:hover {
@@ -162,6 +164,7 @@ p, span, a, input, label, textarea, li {
 .stats i {
     display: block;
     color: #1551a1;
+    margin-bottom: 10px;
 }
 .stats .counter{
     font-size: 36px;
@@ -170,7 +173,7 @@ p, span, a, input, label, textarea, li {
     display: block;
 }
 .stats .type {
-    font-size: 16px;
+    font-size: 18px;
     color: #787878;
 }
 .featured-text-wrap {
@@ -183,7 +186,7 @@ p, span, a, input, label, textarea, li {
 }
 .featured-text {
     text-align: center;
-    width: 500px;
+    width: 600px;
     margin: auto;
     padding: 40px 0;
 }
@@ -195,8 +198,8 @@ p, span, a, input, label, textarea, li {
 }
 .main-services-wrap h1 {
     text-align: center;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 48px;
+    line-height: 72px;
     color: #4867c0;
     margin-bottom: 0;
 }
@@ -228,11 +231,21 @@ p, span, a, input, label, textarea, li {
     font-size: 24px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
+    color: #7a95ac;
+    text-shadow: 1px 1px;
 }
 .caption h4 {
     font-size: 18px;
     text-align: left;
     padding: 0 40px;
+    color: #7a95ac;
+    text-shadow: 1px 1px;
+}
+.caption p {
+    color: #d4d4dc;
+    text-shadow: 1px 1px;
+    font-size: 18px;
+    line-height: 27px;
 }
 .caption ul {
     text-align: left;
@@ -241,6 +254,7 @@ p, span, a, input, label, textarea, li {
     list-style: none;
     text-shadow: 1px 1px;
     padding: 10px 0;
+    color: #d4d4dc;
 }
 .services-txt {
     text-align: center;
@@ -436,6 +450,10 @@ p, span, a, input, label, textarea, li {
 .footer-module h2 {
     font-size: 24px;
 }
+.footer-module p {
+    margin: 5px 0;
+    line-height: 24px;
+}
 .footer-module a {
     color: #fff;
 }
@@ -471,6 +489,7 @@ p, span, a, input, label, textarea, li {
 .dl-menuwrapper {
     max-width: 100%;
     float: none;
+    top: -10px;
 }
 .dl-menuwrapper:first-child {
      margin-right: 0; 
